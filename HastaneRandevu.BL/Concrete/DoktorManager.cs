@@ -11,7 +11,7 @@ namespace HastaneRandevu.BL.Concrete
 {
     public class DoktorManager : ManagerBase<Doktor>, IDoktorManager
     {
-        public DoktorManager(IBaseRepository<Doktor> repository) : base(repository)
+        public DoktorManager(IDoktorRepository repository) : base(repository)
         {
         }
     }

@@ -1,4 +1,9 @@
+﻿using HastaneRandevu.BL.Abstract;
+using HastaneRandevu.BL.Concrete;
 using HastaneRandevu.DAL.Context;
+using HastaneRandevu.DAL.Repository.Abstract;
+using HastaneRandevu.DAL.Repository.Concrete;
+using HastaneRandevu.MVC.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace HastaneRandevu.MVC
@@ -12,11 +17,18 @@ namespace HastaneRandevu.MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-
+            //----------Benim yazdiklarim--------------
+            //json dosyas?ndaki tanimlamayi sqldbcontext nesnesine tanittik.
             builder.Services.AddDbContext<SqlDbContext>(
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("Randevu")));
+            //----------Benim yazdiklarim--------------
 
-            
+            //----------Benim yazdiklarim--------------
+            //Extensionda manager sinifina mvcye register ettigimiz kismi calistirdik.
+            // hata alıyorum
+            builder.Services.AddRandevuServisleri();
+            //----------Benim yazdiklarim--------------
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

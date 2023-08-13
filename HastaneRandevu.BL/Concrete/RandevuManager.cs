@@ -11,7 +11,7 @@ namespace HastaneRandevu.BL.Concrete
 {
     public class RandevuManager : ManagerBase<Randevu>, IRandevuManager
     {
-        public RandevuManager(IBaseRepository<Randevu> repository) : base(repository)
+        public RandevuManager(IRandevuRepository repository) : base(repository)
         {
         }
     }

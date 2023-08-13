@@ -11,7 +11,7 @@ namespace HastaneRandevu.BL.Concrete
 {
     public class HastaManager : ManagerBase<Hasta>, IHastaManager
     {
-        public HastaManager(IBaseRepository<Hasta> repository) : base(repository)
+        public HastaManager(IHastaRepository repository) : base(repository)
         {
         }
     }

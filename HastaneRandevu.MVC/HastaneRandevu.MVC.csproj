@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HastaneRandevu.BL\HastaneRandevu.BL.csproj" />
     <ProjectReference Include="..\HastaneRandevu.DAL\HastaneRandevu.DAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
+    <Folder Include="Views\Doktor\" />
+    <Folder Include="Views\Bolum\" />
   </ItemGroup>
 
 </Project>

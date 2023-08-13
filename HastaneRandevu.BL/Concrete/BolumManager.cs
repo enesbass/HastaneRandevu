@@ -11,7 +11,7 @@ namespace HastaneRandevu.BL.Concrete
 {
     public class BolumManager : ManagerBase<Bolum>, IBolumManager
     {
-        public BolumManager(IBaseRepository<Bolum> repository) : base(repository)
+        public BolumManager(IBolumRepository repository) : base(repository)
         {
         }
     }
