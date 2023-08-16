@@ -18,6 +18,10 @@ namespace HastaneRandevu.DAL.EntityConfig.Concrete
             builder.Property(p => p.HastaSoyadi).HasMaxLength(50);
             builder.Property(p => p.HastaTcNo).HasMaxLength(11);
             builder.Property(p => p.Cinsiyeti).HasMaxLength(10);
+
+            builder.HasData(
+                new Hasta { Id = 1, HastaAdi = "Ali", HastaSoyadi = "Yilmaz", HastaTcNo = "12345678901", Cinsiyeti = "Erkek" },
+                new Hasta { Id = 2, HastaAdi = "Hasan", HastaSoyadi = "Kaya", HastaTcNo = "12345678902", Cinsiyeti = "Erkek" });
         }
     }
 }

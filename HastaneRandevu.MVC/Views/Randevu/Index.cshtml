@@ -1,0 +1,27 @@
+﻿@using HastaneRandevu.Entity.Concrete;
+@model IEnumerable<Randevu>
+
+<a class="btn btn-success" asp-action="Create">Yeni Randevu</a>
+<table class=" table table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(p =>p.Bolum)</th>
+            <th>@Html.DisplayNameFor(p =>p.Doktor)</th>
+            <th>@Html.DisplayNameFor(p =>p.RandevuTarihi)</th>
+            <th>@Html.DisplayNameFor(p =>p.RandevuSaati)</th>
+            <th>@Html.DisplayNameFor(p =>p.Hasta)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var randevu in Model)
+        {
+            <tr>
+                <td>@randevu.Bolum</td>
+                <td>@randevu.Doktor</td>
+                <td>@randevu.Hasta</td>
+                <td>@randevu.RandevuTarihi</td>
+                <td>@randevu.RandevuSaati</td>
+            </tr>
+        }
+    </tbody>
+</table>

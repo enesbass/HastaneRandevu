@@ -1,0 +1,25 @@
+﻿@using HastaneRandevu.Entity.Concrete;
+@model IEnumerable<Hasta>
+
+<a class="btn btn-success" asp-action="Create">Yeni Hasta</a>
+<table class=" table table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(p =>p.HastaAdi)</th>
+            <th>@Html.DisplayNameFor(p =>p.HastaSoyadi)</th>
+            <th>@Html.DisplayNameFor(p =>p.HastaTcNo)</th>
+            <th>@Html.DisplayNameFor(p =>p.Cinsiyeti)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hasta in Model)
+        {
+            <tr>
+                <td>@hasta.HastaAdi</td>
+                <td>@hasta.HastaSoyadi</td>
+                <td>@hasta.HastaTcNo</td>
+                <td>@hasta.Cinsiyeti</td>
+            </tr>
+        }
+    </tbody>
+</table>

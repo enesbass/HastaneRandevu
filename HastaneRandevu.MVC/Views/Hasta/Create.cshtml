@@ -1,0 +1,49 @@
+﻿@using HastaneRandevu.MVC.Models.DTOs;
+@model HastaCreateDTO
+
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Yeni Hasta</h5>
+        <div asp-validation-summary="ModelOnly"></div>
+    </div>
+        <div class="card-body">
+        <form asp-action="Create" method="post">
+            <form>
+                <div class="mb-3">
+                    <label asp-for="HastaAdi">Adınızı Giriniz</label>
+                    <input asp-for="HastaAdi">
+                    <span asp-validation-for="HastaAdi" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="HastaSoyadi">Soyadınızı Giriniz</label>
+                    <input asp-for="HastaSoyadi">
+                    <span asp-validation-for="HastaSoyadi" class="text-danger"></span>
+                </div>
+                <div class="mb-3 form-check">
+                    <label asp-for="HastaTcNo">TcNo Giriniz</label>
+                    <input asp-for="HastaTcNo">
+                    <span asp-validation-for="HastaTcNo" class="text-danger"></span>
+                </div>
+                <div class="mb-3 form-check">
+                    <label asp-for="Cinsiyeti">Cinsiyetinizi Giriniz</label>
+                    <input asp-for="Cinsiyeti">
+                    <span asp-validation-for="Cinsiyeti" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-success">Kaydet</button>
+                <button type="reset" class="btn btn-success">Temizle</button>
+            </form>
+        </form>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml");
+    }
+    
+}
