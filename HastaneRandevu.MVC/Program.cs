@@ -1,10 +1,8 @@
-﻿using HastaneRandevu.BL.Abstract;
-using HastaneRandevu.BL.Concrete;
-using HastaneRandevu.DAL.Context;
-using HastaneRandevu.DAL.Repository.Abstract;
-using HastaneRandevu.DAL.Repository.Concrete;
+﻿using HastaneRandevu.DAL.Context;
+using HastaneRandevu.MVC.AutoMapperProfile;
 using HastaneRandevu.MVC.Extensions;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
 namespace HastaneRandevu.MVC
 {
@@ -25,9 +23,14 @@ namespace HastaneRandevu.MVC
 
             //----------Benim yazdiklarim--------------
             //Extensionda manager sinifina mvcye register ettigimiz kismi calistirdik.
-            // hata alıyorum
             builder.Services.AddRandevuServisleri();
             //----------Benim yazdiklarim--------------
+
+            //----------Benim yazdiklarim--------------
+            // AutoMapper Servislerini ayaga kaldirir
+            builder.Services.AddAutoMapper(typeof(RandevuProfile));
+            //----------Benim yazdiklarim--------------
+
 
             var app = builder.Build();
 
